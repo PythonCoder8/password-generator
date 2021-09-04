@@ -1,5 +1,7 @@
 import string, random, sys
 
+special_chars = "!@#$%^&*()"
+
 try:
     chars = int(
         input(
@@ -13,7 +15,11 @@ except:
 print(
     "".join(
         random.choices(
-            string.ascii_uppercase + string.ascii_lowercase + string.digits, k=chars
+            string.ascii_uppercase
+            + string.ascii_lowercase
+            + string.digits
+            + special_chars,
+            k=chars,
         )
     )
 )
